@@ -123,11 +123,11 @@ Um zu überprüfen, ob unser Ergebnis, mit $x = `r x`$ Richtigen bei $n = `r n`$
 
 ```{r Simulation}
 # Setze Zufallszahlengenerator
-set.seed(1896)
+set.seed(2009)
 # Nullvtlg soll sein: 
 # Wiederhole 1000x: 
 # Rate n-Mal und zähle die Richtigen
-Nullvtlg <- do(1000)* sum( ~ raten(n = n) == "Ja")
+Nullvtlg <- do(1000) * sum( ~ raten(n = n) == "Ja")
 ```
 
 `Nullvtlg` ist jetzt eine Datentabelle, die 1000 Zeilen und eine Spalte hat.
