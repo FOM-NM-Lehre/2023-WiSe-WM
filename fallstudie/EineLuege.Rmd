@@ -13,7 +13,7 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 # Hilfsfunktion. n ist die Anzahl der Versuche
-raten <- function(anzahl = 1) sample(c("Ja", "Nein", "Nein"), size = Anzahl, replace = TRUE)
+raten <- function(Anzahl = 1) sample(c("Ja", "Nein", "Nein"), size = Anzahl, replace = TRUE)
 # Paket mosaic aktivieren
 library(mosaic)
 # Paket DT aktivieren
@@ -113,7 +113,7 @@ Raten (Funktion (`raten()`)) wir `n` mal:
 
 ```{r raten}
 # mein_raten soll das Ergebnis eines n-fachen Ratens sein
-mein_raten <- raten(anzahl = n)
+mein_raten <- raten(Anzahl = n)
 # mein_raten anzeigen
 mein_raten
 ```
@@ -150,7 +150,7 @@ set.seed(1896)
 # Nullvtlg soll sein: 
 # Wiederhole 1000x: 
 # Rate n-Mal und zähle die Richtigen
-Nullvtlg <- do(1000) * count( ~ raten(n = n) == "Ja")
+Nullvtlg <- do(1000) * count( ~ raten(Anzahl = n) == "Ja")
 ```
 
 `Nullvtlg` ist jetzt eine Datentabelle, die 1000 Zeilen und eine Spalte hat.
